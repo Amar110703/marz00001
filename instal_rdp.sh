@@ -16,11 +16,8 @@ echo "Masukan password untuk panel :"
 read pw
 
 echo "Halo, $ip! Selamat datang di script shell ini."
-echo "$domain"
-echo "$node"
-echo "$user"
-echo "$pw"
 echo -e "
+"
 bash <(curl -s https://pterodactyl-installer.se)
 sudo 0
 sudo admin
