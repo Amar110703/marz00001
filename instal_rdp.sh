@@ -28,3 +28,4 @@ echo -e "
     send \"0\r\"
     expect eof
     "
+    echo "𝗜𝗡𝗦𝗧𝗔𝗟𝗔𝗦𝗜 𝗦𝗘𝗟𝗘𝗦𝗔𝗜"
