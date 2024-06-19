@@ -15,9 +15,6 @@ read user
 echo "Masukan password untuk panel :"
 read pw
 
-echo "Halo, $ip! Selamat datang di script shell ini."
-echo ""
-
 curl -s https://pterodactyl-installer.se | bash -s -- << EOF
 0
 EOF
