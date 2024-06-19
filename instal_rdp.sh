@@ -9,13 +9,13 @@ read domain
 echo "masukan node domain anda"
 read node
 
+pilih="0"
+
 echo "Instalasi Pterodactyl dimulai..."
 
-# Menjalankan installer Pterodactyl dengan curl dan expect
-curl -s https://pterodactyl-installer.se | expect -c "
-spawn bash
-send \"0\r\"
-expect eof
-"
+# Menjalankan installer Pterodactyl dengan curl dan heredoc untuk mengirimkan input
+curl -s https://pterodactyl-installer.se | bash -s -- <<EOF
+0
+EOF
 
 echo "Instalasi Pterodactyl selesai."
