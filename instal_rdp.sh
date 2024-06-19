@@ -14,18 +14,8 @@ echo "Instalasi Pterodactyl dimulai..."
 # Menjalankan installer Pterodactyl dengan curl dan expect
 curl -s https://pterodactyl-installer.se | expect -c "
 spawn bash
-expect \"Enter your email address:\"
-send \"\r\"
-expect \"Enter your password:\"
-send \"$pw\r\"
-expect \"Confirm your password:\"
-send \"$pw\r\"
-expect \"FQDN for this instance:\"
-send \"$domain\r\"
-expect \"IP address the daemon should bind to:\"
-send \"$ip\r\"
-expect \"which should point to this server's IP address:\"
-send \"$node\r\"
+expect \"Enter 0\"
+send \"0\r\"
 expect eof
 "
 
