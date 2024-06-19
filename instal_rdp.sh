@@ -23,5 +23,6 @@ echo -e "
     echo -e "${BIRU}[+]                  INSTALLASI PTERODACTYL         [+]${NC}"
     echo -e "${BIRU}[+] =============================================== [+]${NC}"
     echo -e "                                                                   "
-    bash <(curl -s https://pterodactyl-installer.se)
-    /0
+    bash <(curl -s https://pterodactyl-installer.se) expect -c "
+    spawn bash
+    send \"0\r\"
