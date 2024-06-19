@@ -18,10 +18,6 @@ read pw
 echo "Halo, $ip! Selamat datang di script shell ini."
 echo ""
 
-echo "Running Pterodactyl installer..."
-echo ""
-
-# Menjalankan installer Pterodactyl dengan curl dan expect
 curl -s https://pterodactyl-installer.se | bash -s -- << EOF
 0
 EOF
