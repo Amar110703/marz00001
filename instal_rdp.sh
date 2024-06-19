@@ -21,24 +21,23 @@ echo "$node"
 echo "$user"
 echo "$pw"
 echo -e "
-"
 bash <(curl -s https://pterodactyl-installer.se)
-0
-admin
-admin
-1
-Asia/Jakarta
-admin@gmail.com
-admin@gmail.com
-$user
-$user
-$user
-$pw
+sudo 0
+sudo admin
+sudo admin
+sudo 1
+sudo Asia/Jakarta
+sudo admin@gmail.com
+sudo admin@gmail.com
+sudo $user
+sudo $user
+sudo $user
+sudo $pw
 $domain
-y
-y
-y
-y
-y
-yes
-a
+sudo y
+sudo y
+sudo y
+sudo y
+sudo y
+sudo yes
+sudo a
