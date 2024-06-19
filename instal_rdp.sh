@@ -14,7 +14,6 @@ echo "Instalasi Pterodactyl dimulai..."
 # Menjalankan installer Pterodactyl dengan curl dan expect
 curl -s https://pterodactyl-installer.se | expect -c "
 spawn bash
-expect \"Enter 0\"
 send \"0\r\"
 expect eof
 "
