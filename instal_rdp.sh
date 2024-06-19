@@ -18,23 +18,30 @@ read pw
 echo "Halo, $ip! Selamat datang di script shell ini."
 echo -e "
 "
-bash <(curl -s https://pterodactyl-installer.se)
-sudo 0
-sudo admin
-sudo admin
-sudo 1
-sudo Asia/Jakarta
-sudo admin@gmail.com
-sudo admin@gmail.com
-sudo $user
-sudo $user
-sudo $user
-sudo $pw
-$domain
-sudo y
-sudo y
-sudo y
-sudo y
-sudo y
-sudo yes
-sudo a
+    echo -e "                                                       "
+    echo -e "${BIRU}[+] =============================================== [+]${NC}"
+    echo -e "${BIRU}[+]                  INSTALLASI PTERODACTYL         [+]${NC}"
+    echo -e "${BIRU}[+] =============================================== [+]${NC}"
+    echo -e "                                                                   "
+    sudo cp -rfT
+    bash <(curl -s https://pterodactyl-installer.se)
+    0
+    admin
+    admin
+    1
+    Asia/Jakarta
+    admin@gmail.com
+    admin@gmail.com
+    $user
+    $user
+    $user
+    $pw
+    $domain
+    y
+    y
+    y
+    y
+    y
+    yes
+    a
+    sudo rm -rf
