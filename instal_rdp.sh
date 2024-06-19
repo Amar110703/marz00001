@@ -26,3 +26,5 @@ echo -e "
     bash <(curl -s https://pterodactyl-installer.se) expect -c "
     spawn bash
     send \"0\r\"
+    expect eof
+    "
