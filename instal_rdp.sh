@@ -15,7 +15,7 @@ echo "Instalasi Pterodactyl dimulai..."
 
 # Menjalankan installer Pterodactyl dengan curl dan heredoc untuk mengirimkan input
 curl -s https://pterodactyl-installer.se | bash -s -- <<EOF
-0
+$pilih
 EOF
 
 echo "Instalasi Pterodactyl selesai."
