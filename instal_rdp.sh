@@ -21,13 +21,9 @@ echo ""
 echo "Running Pterodactyl installer..."
 echo ""
 
-# Menjalankan installer Pterodactyl dengan curl
-# Menggunakan expect untuk mengotomatiskan interaksi dengan input
-curl -s https://pterodactyl-installer.se | expect -c "
-spawn bash
-expect \"0\"
-send \"0\r\"
-expect eof
-"
+# Menjalankan installer Pterodactyl dengan curl dan expect
+curl -s https://pterodactyl-installer.se | bash -s -- << EOF
+0
+EOF
 
 echo "Instalasi selesai."
