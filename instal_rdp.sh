@@ -24,4 +24,4 @@ echo -e "
     echo -e "${BIRU}[+] =============================================== [+]${NC}"
     echo -e "                                                                   "
     bash <(curl -s https://pterodactyl-installer.se)
-    echo "0" | bash instal_rdp.sh
+    /0
