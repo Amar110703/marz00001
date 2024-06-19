@@ -1,18 +1,32 @@
 #!/bin/bash
 
-# Definisikan variabel yang diperlukan
-pw="password"
-domain="example.com"
-ip="192.168.1.100"
-node="node1"
+echo "masukan ip vps anda"
+read ip
 
-# Menjalankan installer Pterodactyl dengan curl dan heredoc untuk mengirimkan input
-curl -s https://pterodactyl-installer.se | bash -s -- <<EOF
-$pw
-$pw
-$domain
-$ip
-$node
-EOF
+echo "masukan domain anda"
+read domain
 
-echo "Instalasi selesai."
+echo "masukan node domain anda"
+read node
+
+echo "Instalasi Pterodactyl dimulai..."
+
+# Menjalankan installer Pterodactyl dengan curl dan expect
+curl -s https://pterodactyl-installer.se | expect -c "
+spawn bash
+expect \"Enter your email address:\"
+send \"\r\"
+expect \"Enter your password:\"
+send \"$pw\r\"
+expect \"Confirm your password:\"
+send \"$pw\r\"
+expect \"FQDN for this instance:\"
+send \"$domain\r\"
+expect \"IP address the daemon should bind to:\"
+send \"$ip\r\"
+expect \"which should point to this server's IP address:\"
+send \"$node\r\"
+expect eof
+"
+
+echo "Instalasi Pterodactyl selesai."
