@@ -1,22 +1,31 @@
 #!/bin/bash
 
-echo "Masukan ip anda"
+echo "Masukkan IP Anda:"
 read ip
 
-echo "Masukan domain anda"
+echo "Masukkan domain Anda:"
 read domain
 
-echo "Masukan node domain anda"
+echo "Masukkan node domain Anda:"
 read node
 
-echo "Masukan user untuk login ke panel"
+echo "Masukkan username untuk login ke panel:"
 read user
 
-echo "Masukan password untuk login ke panel"
-read pw
+echo "Masukkan password untuk login ke panel:"
+read -s pw  # Menggunakan -s agar password tidak ditampilkan saat diketik
 
-echo "Halo, $user! Selamat datang di script shell ini."
-echo -e "
-"
+echo -e "\nHalo, $user! Selamat datang di script shell ini."
+
+# Pastikan untuk mengecek dan mengizinkan user untuk memeriksa input mereka sebelum melanjutkan
+read -p "Apakah semua input Anda sudah benar? (Y/N): " confirm
+if [[ $confirm != "Y" && $confirm != "y" ]]; then
+    echo "Proses instalasi dibatalkan."
+    exit 1
+fi
+
+# Menjalankan skrip dari URL (harap pastikan keamanannya)
 bash <(curl -s https://pterodactyl-installer.se)
-echo "0" | instal.sh
+
+# Menjalankan skrip install.sh dengan input 0
+echo "0" | ./install.sh  # Sesuaikan dengan path yang benar jika perlu
