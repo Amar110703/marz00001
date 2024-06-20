@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "Masukan ip anda :"
+echo "Masukan ip anda"
 read ip
 
-echo "Masukan domain anda :"
+echo "Masukan domain anda"
 read domain
 
-echo "Masukan node domain anda :"
+echo "Masukan node domain anda"
 read node
 
 echo "Masukan user untuk login ke panel"
