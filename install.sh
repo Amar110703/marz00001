@@ -2,16 +2,12 @@
 
 echo "Masukkan IP Anda:"
 read ip
-
 echo "Masukkan domain Anda:"
 read domain
-
 echo "Masukkan node domain Anda:"
 read node
-
 echo "Masukkan username untuk login ke panel:"
 read user
-
 echo "Masukkan password untuk login ke panel:"
 read -s pw  # Menggunakan -s agar password tidak ditampilkan saat diketik
 
